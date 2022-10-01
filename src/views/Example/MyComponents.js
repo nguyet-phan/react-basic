@@ -14,6 +14,8 @@ class MyComponent extends React.Component {
     */
 
     handleOnChangeName = (event) => {
+        //merge -> setState tu dong set cac gia tri ko thay doi
+        //VD: trong truong hop nay name thay doi, age ko thay doi
         this.setState({
             name: event.target.value
         })
@@ -24,7 +26,7 @@ class MyComponent extends React.Component {
         alert('click me!')
     }
 
-
+    //re-render
     render() {
 
         return (
