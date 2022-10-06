@@ -5,7 +5,13 @@ class MyComponent extends React.Component {
     //state la 1 object {key:value,...}
     state = {
         firstName: '',
-        lastName: ''
+        lastName: '',
+        arrJobs: [
+            { id: 'Job1', title: 'Developer', salary: '1000$' },
+            { id: 'Job2', title: 'Tester', salary: '400$' },
+            { id: 'Job3', title: 'Project Manager', salary: '8000$' },
+
+        ]
     }
     /*
     JSX: 
@@ -55,8 +61,9 @@ class MyComponent extends React.Component {
                     />
                 </form>
                 <ChildComponent
-                    name={'first child'}
+                    name={this.state.firstName}
                     age={'22'}
+                    arrJobs={this.state.arrJobs}
                 />
 
             </>
